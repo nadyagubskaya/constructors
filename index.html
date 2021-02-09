@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            
+            function Student(name, surname, bday) {
+                this.name = name;
+                this.surname = surname;
+                this.bday = bday;
+            }
+            
+            Student.prototype = {
+                get age() {
+                    return (new Date).getFullYear() - this.bday
+                }
+            }
+            
+            let ivan = new Student('Ivan', 'Petrov', 1999);
+            
+        </script>
+    </body>
+</html>
